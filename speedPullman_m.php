@@ -4,7 +4,7 @@ $pasw = "123";
 $user = "Pullman";
 $dia = $_GET['dia'] ?? 1; // Valor predeterminado si no se proporciona 'dia'
 
-include "./conexion.php"; // Incluye la conexión a la base de datos
+include __DIR__."/conexion.php"; // Incluye la conexión a la base de datos
 
 // Obtener el hash de autenticación
 $consulta = "SELECT hash FROM masgps.hash WHERE user='$user' AND pasw='$pasw'";
